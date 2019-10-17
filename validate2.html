@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chrset="UTF 8">
+    <title>Event Registration</title>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<h1> My Club Event</h1>
+<form ng-app="DemoApp" ng-controller="DemoController" name="myForm">
+    <p>Topic Name:<br>
+
+        <input type="text" name="user" ng-model="user">
+
+         <span style="color:red" ng-show="myForm.user.$dirty"> dont change </span>
+      
+        </span>
+    </p>
+    <p>
+        <input type="submit" ng-disabled="myForm.user.$dirty">
+    </p>
+</form>
+<script>
+    var app = angular.module("DemoApp",[]);
+
+    app.controller("DemoController",function($scope) {
+
+                 $scope.user="VIT-AP";
+        
+    });
+</script>
+</body>
+</html>
