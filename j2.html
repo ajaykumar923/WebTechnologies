@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Use the XMLHttpRequest to get the content of a file.</h2>
+<p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+<p id="demo"></p>
+
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "http://127.0.0.1:8090/json/json_demo.txt", true);
+xmlhttp.send();
+
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj.name;
+  }
+
+};
+
+
+</script>
+
+<p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+
+</body>
+</html>
