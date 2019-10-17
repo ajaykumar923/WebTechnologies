@@ -1,0 +1,17 @@
+table,td{
+    border:1px solid #000000;
+    border-collapse:collapse;
+    padding:5px;
+}
+p,h3{
+    text-align:center;
+}
+caption{
+    text-align:left
+}
+td{
+    width:400px;
+}
+table{
+    right: 100px;
+}

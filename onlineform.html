@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tilte>online form</tilte>
+        <script>
+            function start(){
+                var Name=document.getElementById("Name").value;
+                var age=document.getElementById("age").value;
+                var mail=document.getElementById("mail").value;
+                var str = "hello mr."+Name+" your age is "+age+" your mail id id: "+mail;
+                document.getElementById("data").innerHTML=str;
+
+            }
+
+        </script>
+    </head>
+    <body>
+        
+           <label>Name: <input type="text" id="Name"></label>
+           <br>
+           <label>Age     :<input type="number" id="age"></label>
+           <br>
+           <label>Email Id :<input type="mail" id="mail" validate></label>
+           <br>
+           <button onclick="start()">click to submit</button>
+        
+        <p id="data"></p>
+
+    </body>
+</html>

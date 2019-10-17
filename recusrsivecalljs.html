@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>example for recursive callin js function</p>
+<button onclick="start()">click to start</button>
+
+<p id="demo"></p>
+
+<script>
+    function start(){
+var names = ["nani","mahesh","suresh","furukai","hanzo"];
+names.forEach(myFunction);
+
+function myFunction(item, index) {
+  document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
+}}
+</script>
+
+</body>
+</html>
